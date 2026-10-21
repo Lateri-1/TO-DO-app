@@ -1,0 +1,320 @@
+/* Основное приложение */
+.app {
+  min-height: 100vh;
+  background-color: #f5f6fa;
+}
+
+/* Header */
+.header {
+  background: #6c63ff;
+  color: white;
+  padding: 30px 20px;
+}
+
+.header-content {
+  max-width: 900px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  margin: 0;
+  color: white;
+  font-size: 32px;
+}
+
+.header p {
+  margin: 5px 0 0;
+  color: #e9e8ff;
+}
+
+/* Счётчик задач */
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 10px 18px;
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.18);
+  color: white;
+}
+
+.counter-number {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.counter-label {
+  font-size: 13px;
+}
+
+/* Основной контейнер */
+.container {
+  max-width: 900px;
+  margin: 35px auto;
+  padding: 0 20px;
+}
+
+/* Добавление задачи */
+.add-section {
+  display: flex;
+  gap: 10px;
+
+  padding: 15px;
+
+  background: white;
+  border-radius: 12px;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+
+  margin-bottom: 25px;
+}
+
+.todo-input {
+  flex: 1;
+
+  padding: 12px 15px;
+
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  font-size: 16px;
+
+  outline: none;
+}
+
+.todo-input:focus {
+  border-color: #6c63ff;
+}
+
+/* Кнопка Add */
+.add-button {
+  padding: 0 20px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #6c63ff;
+  color: white;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.add-button:hover {
+  background: #574fd6;
+}
+
+/* Секция задач */
+.todo-section {
+  background: white;
+  border-radius: 12px;
+
+  padding: 20px;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Заголовок списка */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 15px;
+}
+
+.section-header h2 {
+  margin: 0;
+  color: #333;
+}
+
+.task-count {
+  color: #888;
+  font-size: 14px;
+}
+
+/* Одна задача */
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px;
+
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+
+  margin-bottom: 10px;
+
+  transition: 0.2s;
+}
+
+.todo-item:hover {
+  background: #fafafa;
+}
+
+/* Левая часть */
+.todo-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.todo-text {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Кнопка DONE */
+.check-button {
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+  border: 2px solid #6c63ff;
+
+  background: white;
+  color: #6c63ff;
+
+  cursor: pointer;
+
+  font-size: 16px;
+
+  transition: 0.2s;
+}
+
+.check-button:hover {
+  background: #6c63ff;
+  color: white;
+}
+
+/* Правая часть */
+.todo-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Статусы */
+.status {
+  padding: 4px 9px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.status-pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-done {
+  background: #d4edda;
+  color: #155724;
+}
+
+/* Когда задача выполнена */
+.todo-item.done {
+  background: #f8fff9;
+}
+
+.todo-item.done .todo-text {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* Кнопка удаления */
+.delete-button {
+  border: none;
+
+  background: transparent;
+  color: #999;
+
+  font-size: 22px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.delete-button:hover {
+  color: #dc3545;
+}
+
+/* Пустой список */
+.empty-state {
+  text-align: center;
+
+  padding: 40px 20px;
+
+  color: #888;
+}
+
+.empty-icon {
+  width: 50px;
+  height: 50px;
+
+  margin: 0 auto 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f0efff;
+  color: #6c63ff;
+
+  font-size: 24px;
+}
+
+.empty-state h3 {
+  margin: 10px 0 5px;
+  color: #444;
+}
+
+.empty-state p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Телефон */
+@media (max-width: 600px) {
+
+  .header-content {
+    align-items: flex-start;
+  }
+
+  .header h1 {
+    font-size: 26px;
+  }
+
+  .container {
+    margin-top: 20px;
+    padding: 0 10px;
+  }
+
+  .add-section {
+    padding: 10px;
+  }
+
+  .add-button {
+    padding: 0 15px;
+  }
+
+  .status {
+    display: none;
+  }
+}
